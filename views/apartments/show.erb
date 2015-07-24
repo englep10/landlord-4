@@ -1,1 +1,7 @@
-This is info about apartment #3.
+<h2><%= @apartment.address %></h2>
+<a href='/apartments/<%= @apartment.id %>/edit'>Edit Apartment</a>
+
+<form method="post" action="/apartments/<% @apartment.id %>">
+  <input name="_method" value="delete" type="hidden">
+  <input type="submit" value="Delete Apartment">
+</form>
